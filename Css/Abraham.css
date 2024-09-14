@@ -1,43 +1,90 @@
-/* Centrar el texto y agregar sombra para la clase "caracteristicas" */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
 .caracteristicas {
-    text-align: center; /* Centrar el texto */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra al texto */
-    font-size: 1.5em; /* Tamaño de fuente más grande */
-    color: #333; /* Color gris oscuro */
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
-/* Estilos para el ID "Soccios" que es un link con una animación de transición */
-#Soccios {
-    color: blue;
-    font-style: italic;
+#contactos a {
+    color: #007BFF;
     text-decoration: none;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Transición suave para el color y tamaño */
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
 
-#Soccios:hover {
-    color: darkblue; /* Cambia a un azul más oscuro cuando el mouse esté encima */
-    font-size: 1.2em; /* Aumenta el tamaño del texto al pasar el mouse */
-    text-decoration: underline; /* Subraya al hacer hover */
+#contactos a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #007BFF;
+    transition: width 0.3s ease-in-out;
 }
 
-/* Estilos creativos para listas */
+#contactos a:hover {
+    color: #0056b3;
+}
+
+#contactos a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 ul {
-    list-style-type: none; /* Elimina las viñetas predeterminadas */
-    padding: 0; /* Elimina el padding predeterminado */
-    margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
 }
 
 ul li {
-    background-color: #f0f0f0; /* Fondo gris claro */
-    border-radius: 10px; /* Bordes redondeados */
-    margin: 10px 0; /* Separación entre los elementos de la lista */
-    padding: 10px;
-    font-size: 1.1em; /* Tamaño de fuente un poco más grande */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de relieve */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    background-color: #f4f4f4;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 ul li:hover {
-    background-color: #d1e7dd; /* Cambia el color de fondo al pasar el mouse */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+ul li p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+    text-align: justify;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
 }
