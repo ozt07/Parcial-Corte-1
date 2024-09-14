@@ -1,0 +1,28 @@
+
+p {
+    color: #4A4A4A; 
+    text-align: center; 
+}
+
+
+div {
+    border: 2px solid #000000; 
+    padding: 10px; 
+    margin: 20px; 
+    border-radius: 8px;
+}
+
+
+.TOW {
+    font-weight: bold; 
+    color: salmon;
+    border: 2px solid #000000; 
+    padding: 10px; 
+    margin: 20px;  
+}
+
+
+#Soccios {
+    font-style: italic; 
+    color: blue; 
+}
